@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_common_headlines",
+  "info": {
+    "displayName": "headline",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "background": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "red",
+        "red-wave"
+      ],
+      "default": "default",
+      "required": true
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4"
+      ],
+      "default": "h1",
+      "required": true
+    }
+  }
+}

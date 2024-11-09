@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_common_texts",
+  "info": {
+    "displayName": "Text",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "blocks"
+    },
+    "background": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "red",
+        "red-wave"
+      ]
+    }
+  }
+}
