@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_mein_leben_key_topics",
+  "info": {
+    "displayName": "KeyTopics",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "topics": {
+      "type": "component",
+      "repeatable": true,
+      "component": "internal.key-topic-item"
+    },
+    "baseSettings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "internal.base-settings"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "intro": {
+      "type": "blocks"
+    }
+  }
+}

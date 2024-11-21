@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_internal_image_of_texts",
+  "info": {
+    "displayName": "ImageOfText",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "image_position_desktop": {
+      "type": "enumeration",
+      "enum": [
+        "in-text-left",
+        "in-text-right",
+        "beside-text-top-left",
+        "beside-text-top-right",
+        "beside-text-center-left",
+        "beside-text-center-right",
+        "beside-text-bottom-left",
+        "beside-text-bottom-right"
+      ],
+      "required": true,
+      "default": "in-text-left"
+    },
+    "image_position_mobile": {
+      "type": "enumeration",
+      "enum": [
+        "before",
+        "after"
+      ]
+    },
+    "image_size_desktop": {
+      "type": "enumeration",
+      "enum": [
+        "full",
+        "half",
+        "third",
+        "quater"
+      ]
+    }
+  }
+}

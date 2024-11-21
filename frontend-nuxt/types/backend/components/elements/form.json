@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_elements_forms",
+  "info": {
+    "displayName": "Form",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "form_id": {
+      "type": "enumeration",
+      "enum": [
+        "contact",
+        "workpaper"
+      ],
+      "default": "contact",
+      "required": true
+    },
+    "errorMessage": {
+      "type": "blocks",
+      "required": true
+    },
+    "successMessage": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

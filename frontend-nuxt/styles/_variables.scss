@@ -1,0 +1,35 @@
+$white: #fff;
+$primary: #F6A049;
+$secondary: #EB5845;
+
+$body-color: #333;
+
+$font-family-base: "Trebuchet MS", sans-serif;
+$font-size-base: 1.125rem;
+
+$headings-font-family: $font-family-base;
+$h1-font-size: 2.75rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.6rem;
+
+$blockquote-font-size: 2rem;
+
+$grid-gutter-width: 1.5rem;
+
+
+$spacer: 1rem;
+$spacers: (
+		0: 0,
+		1: $spacer * .25,
+		2: $spacer * .5,
+		3: $spacer,
+		4: $spacer * 1.5,
+		5: $spacer * 3,
+		gutter: $grid-gutter-width,
+		half-gutter: $grid-gutter-width/2,
+		50: 50px,
+		100: 100px
+);
+
+$enable-negative-margins: true;
+$enable-grid-classes: true;

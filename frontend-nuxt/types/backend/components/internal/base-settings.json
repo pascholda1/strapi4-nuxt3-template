@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_internal_base_settings",
+  "info": {
+    "displayName": "BaseSettings",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "red",
+        "red-wave"
+      ],
+      "default": "default"
+    },
+    "container": {
+      "type": "enumeration",
+      "enum": [
+        "container",
+        "container-fluid"
+      ]
+    }
+  }
+}

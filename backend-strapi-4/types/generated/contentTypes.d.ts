@@ -362,6 +362,38 @@ export interface AdminUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiContactContact extends Schema.CollectionType {
+  collectionName: 'contacts';
+  info: {
+    displayName: 'Contact';
+    pluralName: 'contacts';
+    singularName: 'contact';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact.contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    email: Attribute.Email & Attribute.Required;
+    firstName: Attribute.String;
+    lastName: Attribute.String;
+    message: Attribute.String & Attribute.Required;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::contact.contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomeHome extends Schema.SingleType {
   collectionName: 'homes';
   info: {
@@ -380,7 +412,13 @@ export interface ApiHomeHome extends Schema.SingleType {
   };
   attributes: {
     contents: Attribute.DynamicZone<
-      ['elements.text', 'elements.image', 'elements.headline']
+      [
+        'elements.text',
+        'elements.image',
+        'elements.headline',
+        'mein-leben.key-topics',
+        'elements.form'
+      ]
     > &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -426,6 +464,14 @@ export interface ApiSubpageSubpage extends Schema.CollectionType {
     };
   };
   attributes: {
+    contents: Attribute.DynamicZone<
+      ['elements.text', 'elements.image', 'elements.headline']
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::subpage.subpage',
@@ -446,6 +492,15 @@ export interface ApiSubpageSubpage extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    slug: Attribute.String &
+      Attribute.Required &
+      Attribute.Unique &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.DefaultTo<'/meine-seite.html'>;
     title: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -898,6 +953,7 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::contact.contact': ApiContactContact;
       'api::home.home': ApiHomeHome;
       'api::subpage.subpage': ApiSubpageSubpage;
       'plugin::content-releases.release': PluginContentReleasesRelease;

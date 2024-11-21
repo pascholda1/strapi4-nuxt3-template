@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_internal_base_text_settings",
+  "info": {
+    "displayName": "BaseTextSettings"
+  },
+  "options": {},
+  "attributes": {
+    "textAlign": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ]
+    }
+  }
+}

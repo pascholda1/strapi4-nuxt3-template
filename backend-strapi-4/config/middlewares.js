@@ -9,4 +9,13 @@ module.exports = [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
+  {
+    name: 'strapi::compression',
+    config: {
+      threshold: 1024,
+      br: false,
+      deflate: true,
+      gzip: true,
+    },
+  },
 ];
